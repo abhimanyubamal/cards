@@ -29,7 +29,8 @@
 }
 
 .b-img {
-    background-image: url("../images/background-img.png");
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%), url("../images/background-img.png");
+    /* background-image: url("../images/background-img.png"); */
     background-size: cover;
     background-repeat: no-repeat;
 }
