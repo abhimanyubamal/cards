@@ -247,13 +247,9 @@ li {
     color: white;
 }
 
-.m .menu-button {
-    display: none;
-}
-
 /* Responsive */
 
-@media (min-width:576px) {
+/* @media (min-width:576px) {
     .col-md-6 {
         width: 50%;
         padding-left: 12px;
@@ -276,4 +272,47 @@ li {
         padding-left: 12px;
         padding-right: 12px;
     }
+} */
+
+@media (max-width:992px) {
+    label[for="menu-button"] {
+        height: 20px;
+        width: 18px;
+        position: relative;
+        z-index: 1;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    label[for="menu-button"]>span {
+        background-color: grey;
+        width: 100%;
+        height: 5px;
+        border-radius: 2px;
+    }
+
+    ul.menu {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        right: -100%;
+        transition: all 1s linear;
+        /* display: none; */
+    }
+
+    input[type="checkbox"]:checked~ul {
+        /* display: block; */
+        right: 0;
+        background-color: red;
+    }
+
 }
